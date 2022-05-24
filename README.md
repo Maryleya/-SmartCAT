@@ -1,1 +1,1 @@
-# -SmartCAT
+# Glossaries-for-SmartCAT
