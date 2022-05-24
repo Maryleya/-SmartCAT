@@ -11,7 +11,7 @@ profile = webdriver.FirefoxProfile()
 profile.set_preference("general.useragent.override", useragent.random)
 
 def terms(needed_term):
-    driver = webdriver.Firefox(executable_path = '')
+    driver = webdriver.Firefox(executable_path=GeckoDriverManager().install())
     url = 'https://www.multitran.com/m.exe?l1=1&l2=2'
     driver.get(url)
     soup = BeautifulSoup(driver.page_source, 'html.parser')
@@ -49,7 +49,7 @@ def terms(needed_term):
         print('No such category')
 
 def parse_nth_page(url, entry):
-    driver = webdriver.Firefox(executable_path = '')
+    driver = webdriver.Firefox(executable_path=GeckoDriverManager().install())
     driver.get(url)
     rus_list = []
     eng_list = []
